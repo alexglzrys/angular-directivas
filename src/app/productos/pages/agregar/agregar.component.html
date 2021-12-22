@@ -9,7 +9,9 @@
       <input type="text" formControlName="nombre" class="form-control">
     </div>
     <div class="col-auto">
-      <span class="form-text" *ngIf="tieneError('nombre')">
+      <!-- Usar la directiva personalizada en este elemento HTML. Por tanto va a heredar todo el comportamiento y funciones
+      que ofrece esta directiva -->
+      <span class="form-text" error-msg *ngIf="tieneError('nombre')">
         Este campo es requerido
       </span>
     </div>
