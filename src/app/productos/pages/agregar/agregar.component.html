@@ -12,9 +12,10 @@
       <!-- Usar la directiva personalizada en este elemento HTML. Por tanto va a heredar todo el comportamiento y funciones
       que ofrece esta directiva
       La directiva puede recibir entradas de información @Input() del mismo modo que los componentes, solo basta definir la propiedad asociada y pasarle el valor -->
-      <span class="form-text" color="teal" error-msg *ngIf="tieneError('nombre')">
-        Este campo es requerido
-      </span>
+      <span error-msg
+            color="teal"
+            mensaje="Debe ingresar este campo"
+            *ngIf="tieneError('nombre')"></span>
     </div>
   </div>
   <div class="row mt-5">
