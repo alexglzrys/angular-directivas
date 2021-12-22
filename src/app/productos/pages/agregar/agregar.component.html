@@ -1,4 +1,5 @@
 <h1 class="mt-4">Agregar Producto</h1>
+<span class="badge bg-primary">{{ mensaje }}</span>
 <hr>
 <form class="mt-4" [formGroup]="miFormulario">
   <div class="row g-3 align-items-center mb-3">
@@ -13,14 +14,15 @@
       que ofrece esta directiva
       La directiva puede recibir entradas de información @Input() del mismo modo que los componentes, solo basta definir la propiedad asociada y pasarle el valor -->
       <span error-msg
-            color="teal"
-            mensaje="Debe ingresar este campo"
+            [color]="color"
+            [mensaje]="mensaje"
             *ngIf="tieneError('nombre')"></span>
     </div>
   </div>
   <div class="row mt-5">
     <div class="col">
-      <button class="btn btn-primary">Guardar</button>
+      <button class="btn btn-primary" (click)="cambiarMensaje()">Guardar</button>
+      <button class="btn btn-warning ms-3" (click)="cambiarColor()">Cambiar color</button>
     </div>
   </div>
 </form>
