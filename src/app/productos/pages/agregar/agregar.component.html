@@ -34,3 +34,14 @@
 <h4 class="mt-5">Inspeccionar Formulario</h4>
 <pre>Value: {{ miFormulario.value | json }}</pre>
 <pre>Valid: {{ miFormulario.valid }}</pre>
+
+
+<div class="row mt-5">
+  <div class="col">
+    <!-- Ejemplo de directiva estructural personalizada. La referencia a todo el elemento para destruirlo a crearlo es el *, sumado al nombreDirectiva -->
+    <div class="alert alert-primary" *mostrarSi="miFormulario.valid">
+      <h4>Aviso</h4>
+      <p>Datos correctos en el formulario.</p>
+    </div>
+  </div>
+</div>
