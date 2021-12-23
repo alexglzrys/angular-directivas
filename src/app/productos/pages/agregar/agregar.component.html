@@ -13,10 +13,14 @@
       <!-- Usar la directiva personalizada en este elemento HTML. Por tanto va a heredar todo el comportamiento y funciones
       que ofrece esta directiva
       La directiva puede recibir entradas de información @Input() del mismo modo que los componentes, solo basta definir la propiedad asociada y pasarle el valor -->
-      <span error-msg
+      <!-- <span error-msg
             [color]="color"
             [mensaje]="mensaje"
-            *ngIf="tieneError('nombre')"></span>
+            *ngIf="tieneError('nombre')"></span> -->
+
+      <span error-msg
+            [color]="color"
+            [valido]="tieneError('nombre')"></span>
     </div>
   </div>
   <div class="row mt-5">

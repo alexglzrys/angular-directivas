@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AgregarComponent implements OnInit {
 
-  mensaje: string = 'Este es un campo obligatorio';
+  mensaje: string = 'Este es un campo obligatorio - Padre';
   color: string = 'teal';
 
   // Inicializar el formulario reactivo
@@ -27,11 +27,12 @@ export class AgregarComponent implements OnInit {
   }
 
   cambiarMensaje(): void {
-    this.mensaje = 'El nombre es un dato requerido';
+    this.mensaje = 'El nombre es un dato requerido - Método Padre';
   }
 
   cambiarColor(): void {
-    this.color = 'gold';
+    const color = "#xxxxxx".replace(/x/g, y=>(Math.random()*16|0).toString(16));
+    this.color = color;
   }
 
 }
